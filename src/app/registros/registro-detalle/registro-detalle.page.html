@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/registros"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{registro.nombrePrograma}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="deletePlace()">
+        <ion-icon name="trash">
+
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col>
+
+        <ion-row>
+          <h4 class="ion-text-center">Nombre Archivo = {{registro.nombrePrograma}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">n1 = {{registro.n1}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">N1 = {{registro.N1}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">n2 = {{registro.n2}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">N2 = {{registro.N2}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">Longitud (N) = {{N}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">Vocabulario(n) = {{n}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">Volumen(V) = {{v}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">Dificultad(D) = {{d}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">Nivel(L) = {{l}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">Esfuerzo(E) = {{e}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">Tiempo(T) = {{t}}</h4>
+        </ion-row>
+
+        <ion-row>
+          <h4 class="ion-text-center">Bugs(B) = {{b}}</h4>
+        </ion-row>
+
+        <hr>
+<!--
+        <ion-row>
+            <h4 class="ion-text-center">Código:</h4>
+        </ion-row>
+
+        <ion-row>
+          <p class="ion-text-justify">{{registro.codigo}}</p>
+        </ion-row>
+-->
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

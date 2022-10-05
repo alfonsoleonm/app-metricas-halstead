@@ -11,6 +11,23 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'registros',
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('./registros/registros.module').then( m => m.RegistrosPageModule)
+      },
+      {
+        path: ":registroID",
+        loadChildren: () => import('./registros/registro-detalle/registro-detalle.module').then(m => m.RegistroDetallePageModule)
+      }
+    ]
+  },
+  {
+    path: 'agregarRegistro',
+    loadChildren: () => import('./registros/registro-agregar/registro-agregar.module').then(m => m.RegistroAgregarPageModule)
+  }
 ];
 
 @NgModule({

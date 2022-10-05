@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/registros"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nuevo Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-row>
+    <ion-col>
+
+      <ion-card>
+
+        <ion-card-content>
+
+          <ion-input type="text" placeholder="Nombre del Archivo" readonly #nombrePrograma></ion-input>
+          
+          <h4>n1</h4> <ion-input type="text" placeholder="n1" readonly #n1></ion-input>
+          <h4>N1</h4> <ion-input type="text" placeholder="N1" readonly #N1></ion-input>
+          <h4>n2</h4> <ion-input type="text" placeholder="n2" readonly #n2></ion-input>
+          <h4>N2</h4> <ion-input type="text" placeholder="N2" readonly #N2></ion-input>
+          
+          <h2>Código</h2>
+          <ion-item>
+            <ion-textarea disabled readonly auto-grow #codigo></ion-textarea>
+          </ion-item>
+
+          <h2>OPERADORES</h2>
+          <ion-item>
+            <ion-textarea disabled readonly auto-grow #operadoresInput></ion-textarea>
+          </ion-item>
+
+          <h2>OPERANDOS</h2>
+          <ion-item>
+            <ion-textarea disabled readonly auto-grow #operandosInput></ion-textarea>
+          </ion-item>
+
+          <input type="file" (change)="uploadFile($event.target.files, nombrePrograma, n1, N1, n2, N2, codigo, operadoresInput, operandosInput)" required>
+          <br><br>
+          <ion-button color="success" expand="block" (click)="addNewRegistro(nombrePrograma, n1, N1, n2, N2, codigo)">Agregar</ion-button>
+        </ion-card-content>
+
+      </ion-card>
+
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>
